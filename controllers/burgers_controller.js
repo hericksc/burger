@@ -18,9 +18,9 @@ router.get("/", function(req, res) {
 
 router.post("/api/burger", function(req, res) {
   burgers.create([
-    "burger_name", "sleepy"
+    "burger_name", "id"
   ], [
-    req.body.burger_name, req.body.sleepy
+    req.body.burger_name, req.body.id
   ], function(result) {
     // Send back the ID of the new quote
     res.json({ id: result.insertId });
@@ -33,7 +33,7 @@ router.put("/api/burgers/:id", function(req, res) {
   console.log("condition", condition);
 
   burgers.update({
-    sleepy: req.body.sleepy
+    burgers: req.body.burger_name
   }, condition, function(result) {
     if (result.changedRows == 0) {
       // If no rows were changed, then the ID must not exist, so 404

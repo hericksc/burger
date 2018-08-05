@@ -21,14 +21,6 @@ $(function() {
       );
     });
   
-    // $(".create-form").on("submit", function(event) {
-    //   // Make sure to preventDefault on a submit event.
-    //   event.preventDefault();
-  
-    //   var newCat = {
-    //     name: $("#ca").val().trim(),
-    //     sleepy: $("[name=sleepy]:checked").val().trim()
-    //   };
   
       // Send the POST request.
       $.ajax("/api/burgers", {
