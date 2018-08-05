@@ -2,21 +2,21 @@
 
 <img src="../assets/img/burger.jpg" alt="burgerpic">
 
-
+<h2>Burgers Added</h2>
 <ul>
-  {{#each burger}}
-    {{#unless Devour}}
-      {{> partial/burger-block newburger=true}}
+  {{#each burger_name}}
+    {{#unless devoured}}
+      {{> burger-block newburger=true}}
     {{/unless}}
   {{/each}}
 </ul>
 
-<h2>Burgers Added</h2>
+<h2>Burgers Devoured</h2>
 
 <ul>
-  {{#each burger}}
-    {{#if Devour}}
-      {{> partial/burger-block newburger=false}}
+  {{#each burger_name}}
+    {{#if devoured}}
+      {{> burger-block newburger=false}}
     {{/if}}
   {{/each}}
 </ul>
@@ -27,22 +27,9 @@
   	<button type="submit">Add Burger</button>
   </form>
 </div>
-<h2>Burgers Devoured</h2>
-<form class="create-form">
-
-  {{!-- <div class="form-group">
-    <label for="ca">Burger Name:</label>
-    <input type="text" id="burger" name="name">
-  </div> --}}
-{{!-- 
-  <div class="form-group">
-    <label for="burger">Add a Burger</label><br>
-    <input type="text" name="burger"> <br>
-    
-  </div>
-
-  <button type="submit">Add Burger</button> --}}
 
 
-  <button type="delete">Devour Burger</button>
-</form>
+
+
+
+

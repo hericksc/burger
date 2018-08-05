@@ -34,8 +34,15 @@ img {
     margin-left: 200px;
 }
 body {
-    background-color: rgb(160, 160, 35);
+    background-color: lightgray;
 }
 #addburger {
+    margin-left: 150px;
+    padding: 50px;
+}
+li {
+    font-size: 24px;
+    color: darkgreen;
+    font-weight: bold;
     margin-left: 200px;
 }
